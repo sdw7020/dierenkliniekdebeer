@@ -1,0 +1,45 @@
+.a {
+  background: rgb(212,215,218);
+}
+
+.b {
+  background: rgb(222,225,228);
+}
+
+.c {
+  background: rgb(232,235,238);
+}
+
+.headerlink {
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  padding: 0 24px;
+  line-height: 64px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+}
+
+.headerlink:hover {
+  background: rgb(222,225,228);
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  top: 0%;
+  font-family: 'Raleway', sans-serif;
+}
+
+#header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  width: 100%;
+  height: 64px;
+  background: rgb(44, 44, 44);
