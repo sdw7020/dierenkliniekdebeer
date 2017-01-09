@@ -2,45 +2,208 @@
 <html>
 <head>
   <title>Dierenkliniek De Beer</title>
+  <link rel="shortcut icon" href="favicon.ico">
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Josefin+Sans" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style.css"/>
-  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.fullPage.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+  <!--
+  - filmpje
+  - dierenverzekering
+  - facebook foto's - https://www.facebook.com/dierenkliniek.debeer
+  - social media
+  -->
   <script>
-  $(document).ready(function() {
-      $('#fullpage').fullpage();
-  });
+  function whenScroll() {
+    /* HEADER */
+    if (document.getElementById('fullpage').scrollTop >= 105) {
+      document.getElementById('header').style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.26)";
+    } else {
+      document.getElementById('header').style.boxShadow = "none";
+    }
+
+    var headeropacity = (1 / (window.innerHeight - 64)) * document.getElementById('fullpage').scrollTop;
+    document.getElementById('header').style.background = "rgba(156, 39, 176, "+headeropacity+")";
+    document.getElementsByTagName('h2')[0].style.color = "rgba(255,255,255,"+(1-1.5*headeropacity)+")";
+    document.getElementsByTagName('h3')[0].style.color = "rgba(255,255,255,"+(1-2*headeropacity)+")";
+
+    var h2padTop = 100 + headeropacity * 500;
+    var h3padTop = 225 + headeropacity * 500;
+    document.getElementsByTagName('h2')[0].style.paddingTop = h2padTop + "px";
+    document.getElementsByTagName('h3')[0].style.paddingTop = h3padTop + "px";
+
+    /* NAV BORDER */
+    if (document.getElementById('fullpage').scrollTop >= window.innerHeight - 64) {
+      document.getElementsByClassName('headerlink')[Math.floor(document.getElementById('fullpage').scrollTop / (window.innerHeight - 64))].style.borderBottom = "4px solid rgba(222,225,229,0.5)";
+      document.getElementsByClassName('headerlink')[Math.floor(document.getElementById('fullpage').scrollTop / (window.innerHeight - 64)) - 1].style.borderBottom = "none";
+      document.getElementsByClassName('headerlink')[Math.floor(document.getElementById('fullpage').scrollTop / (window.innerHeight - 64)) + 1].style.borderBottom = "none";
+    } else {
+      for (var i = 0; i < document.getElementsByClassName('headerlink').length; i++) {
+        document.getElementsByClassName('headerlink')[i].style.borderBottom = "none";
+      }
+    }
+  }
+
+  /* SMOOTH SCROLL */
+  function smoothScroll(containerId) {
+    var containerOrder = 0;
+    switch (containerId) {
+      case "home":
+      case 0:
+        containerOrder = 0;
+        break;
+      case "onsteam":
+      case 1:
+        containerOrder = 1;
+        break;
+      case "nieuws":
+      case 2:
+        containerOrder = 2;
+        break;
+      case "service":
+      case 3:
+        containerOrder = 3;
+        break;
+      case "dierverz":
+      case 4:
+        containerOrder = 4;
+        break;
+      case "voorlichting":
+      case 5:
+        containerOrder = 5;
+        break;
+      case "dierinfo":
+      case 6:
+        containerOrder = 6;
+        break;
+      case "links":
+      case 7:
+        containerOrder = 7;
+        break;
+    }
+    $('#fullpage').animate({
+      scrollTop: containerOrder * (window.innerHeight - 64)
+    }, 800);
+  }
   </script>
 </head>
 
 <body>
-  <div id="fullpage">
+  <div id="background"><div id="bgoverlay"></div></div>
+  <div id="fullpage" onscroll="whenScroll()">
     <div id="home" class="section a">
-      <h1>Dierenkliniek De Beer</h1>
+      <h2 class="noselect">Dierenkliniek De Beer</h2>
+      <h3 class="noselect">omdat uw huisdier de beste zorg verdient!</h3>
+      <!---<div class="button noselect">Lees meer</div>-->
     </div>
-    <div id="onsteam" class="section b">
-      <h1>Ons team</h1>
+
+    <div id="onsteam" class="section a b">
+      <div class="container">
+        <h1>Ons team</h1>
+        <img width="400px" src="http://www.dierenkliniekdebeer.nl/Afbeeldingen/team1.jpg"?></img>
+        <span>J.C.H.F.M. (Jos) de Beer<br>
+              J.H.C. (Sjak) van Dijk<br>
+              Marianne<br>
+              Alexandra<br>
+              Lieke<br>
+              Selina<br>
+              Kim<br>
+        </span>
+        <div class="button noselect">Lees meer</div>
+      </div>
     </div>
-    <div id="voorlichting" class="section c">
-      <h1>Voorlichting</h1>
+
+    <div id="nieuws" class="section a c">
+      <div class="container c">
+        <h1>Nieuws en acties</h1>
+        <span>opvultekst...m keflwml;vkefmwglkermw;
+        </span>
+        <div class="button noselect">Lees meer</div>
+      </div>
     </div>
-    <div id="dierinfo" class="section b">
-      <h1>Dierinformatie</h1>
+
+    <div id="service" class="section a b">
+      <div class="container">
+        <h1>Extra service</h1>
+        <span>Assistentespreekuur.<br>
+              Bezorgservice.<br>
+              Thuisservice.<br>
+              EHBO-box.<br>
+              Pup programma.
+        </span>
+        <div class="button noselect">Lees meer</div>
+      </div>
     </div>
-    <div id="service" class="section a">
-      <h1>Extra service</h1>
+
+    <div id="dierverz" class="section a c">
+      <div class="container c">
+        <img height="400px" src="http://www.dierenartshandschoenen.nl/wp-content/uploads/2013/06/dierenarts-stethoscoop.png"?></img>
+        <h1>Dierenverzekeringen</h1>
+        <span>....
+        </span>
+        <div class="button noselect">Lees meer</div>
+      </div>
     </div>
+
+    <div id="voorlichting" class="section a b">
+      <div class="container">
+        <h1>Voorlichting</h1>
+        <span>Preventief.<br>
+              Voeding.<br>
+              Aandoeningen<br>
+              Overig.
+        </span>
+        <div class="button noselect">Lees meer</div>
+      </div>
+    </div>
+
+    <div id="dierinfo" class="section a c">
+      <div class="container c">
+        <h1>Dierinformatie</h1>
+        <span>
+          Naast verschillende soorten huisdieren komen er in onze kliniek ook wel eens wilde dieren terecht.
+          Denkt u hierbij bijvoorbeeld aan aangereden vogels en wilde konijnen,
+          maar in de herfst en winter zien we ook regelmatig wilde egeltjes.
+          Deze scharrelen soms rond in tuinen en sommige najaarsegeltjes zijn in de herfst nog niet gevoed genoeg om
+          de hele winter door te komen op hun reserves. Wilt u weten wat u kunt doen als u een egeltje ziet rondscharrelen?
+          Lees dan de informatie onder het kopje 'Wilde egels'.
+        </span>
+        <div class="button noselect">Lees meer</div>
+      </div>
+    </div>
+    <!---
+    <div id="links" class="section a b">
+      <div class="container">
+        <h1>Links</h1>
+        <span>
+          linkjesssss
+        </span>
+        <div class="button noselect">Lees meer</div>
+      </div>
+    </div>-->
   </div>
 
   <div id="header">
-    <div href="#home" class="headerlink">Home</div>
-    <div href="#onsteam" class="headerlink">Ons team</div>
-    <div href="#voorlichting" class="headerlink">Voorlichting</div>
-    <div href="#dierinfo" class="headerlink">Dierinformatie</div>
-    <div href="#service" class="headerlink">Extra service</div>
+    <a onclick="smoothScroll('home')" class="headerlink noselect">Home</a>
+    <a onclick="smoothScroll('onsteam')" class="headerlink noselect">Ons team</a>
+    <a onclick="smoothScroll('nieuws')" class="headerlink noselect">Nieuws</a>
+    <a onclick="smoothScroll('service')" class="headerlink noselect">Service</a>
+    <a onclick="smoothScroll('dierverz')" class="headerlink noselect">Verzekeringen</a>
+    <a onclick="smoothScroll('voorlichting')" class="headerlink noselect">Voorlichting</a>
+    <a onclick="smoothScroll('dierinfo')" class="headerlink noselect">Dierinformatie</a>
+    <!---<a onclick="smoothScroll('links')" class="headerlink noselect">Links</a>-->
+  </div>
+
+  <div id="contact"><i class="material-icons noselect">contact_phone</i>
+    <div id="contactcontent">
+      Zwolle Centrum<br>
+      Emmastraat 2<br>
+      038-4214420 <br><br>
+      Spoed/weekend:<br>
+      0900-1155115
+    </div>
   </div>
 </body>
 </html>
