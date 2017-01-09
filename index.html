@@ -16,6 +16,11 @@
   - social media
   -->
   <script>
+  
+  if (window.innerWidth < window.innerHeight) {
+    window.location = "mob.html" 
+  }
+    
   function whenScroll() {
     /* HEADER */
     if (document.getElementById('fullpage').scrollTop >= 105) {
