@@ -26,6 +26,20 @@ body {
                                   not supported by any browser */
 }
 
+.container {
+  margin-top: 64px;
+  margin-left: 12%;
+  margin-right: 12%;
+  width: 76%;
+  margin-bottom: 300px;
+  height: auto;
+  left: 0px;
+  top: 0px;
+  align-items: stretch;
+  clear: both;
+  background: #fff;
+}
+
 .headerlink {
   float: left;
   text-align: center;
