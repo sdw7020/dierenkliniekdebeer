@@ -8,6 +8,10 @@
                                   not supported by any browser */
 }
 
+a {
+  text-decoration: none;
+}
+  
 .floatleft {
   float: left;
 }
