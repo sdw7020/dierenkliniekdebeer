@@ -3,6 +3,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
   font-size: 20px;
+  overflow: hidden;
 }
 
 #header {
@@ -38,6 +39,7 @@ body {
   align-items: stretch;
   clear: both;
   background: #fff;
+  overflow: scroll;
 }
 
 .headerlink {
