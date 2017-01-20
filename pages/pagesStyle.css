@@ -1,7 +1,4 @@
 body {
-  color: #555;
-  font-weight: lighter;
-  font-size: 20px;
   overflow: hidden;
 }
 
@@ -40,6 +37,9 @@ body {
   background: #fff;
   overflow: scroll;
   font-family: 'Raleway', sans-serif;
+  color: #555;
+  font-weight: lighter;
+  font-size: 20px;
 }
 
 .headerlink {
