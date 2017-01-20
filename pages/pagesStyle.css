@@ -1,6 +1,5 @@
 body {
   color: #555;
-  font-family: 'Raleway', sans-serif;
   font-weight: lighter;
   font-size: 20px;
   overflow: hidden;
@@ -40,6 +39,7 @@ body {
   clear: both;
   background: #fff;
   overflow: scroll;
+  font-family: 'Raleway', sans-serif;
 }
 
 .headerlink {
