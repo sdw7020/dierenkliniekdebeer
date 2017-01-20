@@ -25,10 +25,9 @@ body {
 
 .container {
   margin-top: 64px;
-  margin-left: 12%;
-  margin-right: 12%;
-  width: 76%;
-  margin-bottom: 300px;
+  padding-top: 24px;
+  padding-left: 12%;
+  width: 100%;
   height: auto;
   left: 0px;
   top: 0px;
