@@ -1,4 +1,5 @@
 body {
+  overflow: hidden;
 }
 
 #header {
@@ -26,7 +27,7 @@ body {
   margin-top: 64px;
   padding-top: 24px;
   padding-left: 12%;
-  width: 100%;
+  width: 76%;
   height: auto;
   left: 0px;
   top: 0px;
