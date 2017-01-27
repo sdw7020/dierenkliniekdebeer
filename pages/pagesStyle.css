@@ -2,6 +2,10 @@ body {
   overflow: hidden;
 }
 
+img { 
+  float: right;
+}
+
 #header {
   position: absolute;
   left: 0px;
