@@ -91,3 +91,18 @@ body {
   transition: all 0s;
   cursor: default;
 }
+
+#fb {
+  position: absolute;
+  top: 16px;
+  right: 80px;
+  opacity: 0.9;
+}
+
+#yt {
+  position: absolute;
+  top: 16px;
+  right: 32px;
+  opacity: 0.9;
+}
+
