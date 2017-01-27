@@ -160,11 +160,6 @@ small {
   font-family: 'Roboto', sans-serif;
 }
 
-img {
-  float: right;
-  top: 0px;
-}
-
 #header {
   position: absolute;
   left: 0px;
