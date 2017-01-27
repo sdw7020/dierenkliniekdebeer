@@ -23,14 +23,10 @@ body {
 }
 
 .container {
-  margin-top: 64px;
-  padding-top: 24px;
-  padding-left: 12%;
-  padding-right: 12%;
   width: 100%;
-  height: auto;
+  height: calc(100% - 64px);
   left: 0px;
-  top: 0px;
+  top: 64px;
   align-items: stretch;
   clear: both;
   background: #fff;
