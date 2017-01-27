@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  padding-left: 12% 6%;
+  padding: 12% 6%;
   width: 76%;
   height: calc(88% - 64px);
   left: 0px;
