@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
 }
 
 #header {
@@ -35,7 +34,6 @@ body {
   align-items: stretch;
   clear: both;
   background: #fff;
-  overflow: scroll;
   font-family: 'Raleway', sans-serif;
   color: #555;
   font-weight: lighter;
