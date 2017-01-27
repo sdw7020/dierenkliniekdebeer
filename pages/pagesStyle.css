@@ -24,10 +24,9 @@ body {
 }
 
 .container {
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 12% 6%;
   width: 76%;
-  height: calc(100% - 64px);
+  height: calc(88% - 64px);
   left: 0px;
   top: 64px;
   align-items: stretch;
