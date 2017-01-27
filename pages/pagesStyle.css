@@ -26,7 +26,7 @@ body {
 .container {
   padding: 6% 12%;
   width: 76%;
-  height: calc(88% - 64px);
+  height: calc(76% - 64px);
   left: 0px;
   top: 64px;
   align-items: stretch;
